@@ -44,8 +44,8 @@
       if (!$('#cluetip').length) {
         $(['<div id="cluetip">',
           '<div id="cluetip-outer">',
-            '<h3 id="cluetip-title"></h3>',
-            '<div id="cluetip-inner"></div>',
+            '<div id="cluetip-title" class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-dialog-title"></div>',
+            '<div id="cluetip-inner" class="ui-dialog-content ui-widget-content"></div>',
           '</div>',
           '<div id="cluetip-extra"></div>',
           '<div id="cluetip-arrows" class="cluetip-arrows"></div>',
