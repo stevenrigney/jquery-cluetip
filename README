@@ -10,7 +10,7 @@
  * @type jQuery
  * @cat Plugins/tooltip
  * @return jQuery
- * @author Karl Swedberg
+ * @author Karl Swedberg,  Steven Rigney
  *
  * @requires jQuery v1.2.6+
  *
