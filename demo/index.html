@@ -97,76 +97,14 @@
           <div class="jquery">View the jQuery</div>
 <pre><code>$('ol:first a:last').cluetip({tracking: true});</code></pre>
         </li>
-      </ol>
-      <h4>jTip Theme</h4>
-      <ol>
-        <li><a class="jt" href="ajax6.htm" rel="ajax6.htm" title="jTip Style!">jTip Style clueTip</a>, with slideDown effect and an image placed in the title for closing it, because it's sticky. <br />
-        <ins>New</ins>: The clueTip will close if you mouse out of it. 
-          <div class="html">View the HTML</div>
-          <pre><code>&lt;a class="jt" href="ajax6.htm" rel="ajax6.htm" title="jTip Style!"&gt;</code></pre>
-          <div class="jquery">View the jQuery</div>
-<pre><code>$('a.jt:eq(0)').cluetip({
-  cluetipClass: 'jtip', 
-  arrows: true, 
-  dropShadow: false,
-  hoverIntent: false,
-  sticky: true,
-  mouseOutClose: true,
-  closePosition: 'title',
-  closeText: '&lt;img src="cross.png" alt="close" /&gt;'
-});
-</code></pre>
-        </li>
-        <li>This one has hoverIntent turned off. Look for the link floated right: <span style="float:right"><a class="jt" href="ajax5.htm" rel="ajax5.htm">jTip Style clueTip</a></span> 
-          <div class="html">View the HTML</div>
-          <pre><code>&lt;a class="jt" href="ajax5.htm" rel="ajax5.htm"&gt;</code></pre>
-          <div class="jquery">View the jQuery</div>
-<pre><code>$('a.jt:eq(1)').cluetip({cluetipClass: 'jtip', arrows: true, dropShadow: false, hoverIntent: false});
-</code></pre>  
-        </li>
         <li>This one pulls the clueTip contents directly from the <code>title</code> attribute of a <code>span</code> tag: <span title="Split Title|This clueTip's contents were created directly from the title attribute|Nice for minimum info.">splitTitle clueTip</span>
           <div class="html">View the HTML</div>
           <code>&lt;span title="Split Title|This clueTip's contents were created directly from the title attribute|Nice for minimum info."&gt;</code>
           <div class="jquery">View the jQuery</div>          
 <pre><code>$('span[title]').css({borderBottom: '1px solid #900'}).cluetip({
   splitTitle: '|', 
-  arrows: true, 
-  dropShadow: false, 
-  cluetipClass: 'jtip'}
+  dropShadow: false}
 );</code></pre>        
-        </li>
-        <li>this sticky clueTip has a <a class="jt" href="ajax5.htm" rel="ajax5.htm">fixed height</a>. It's generally a good idea to make fixed-height clueTips sticky as well, just in case the content requires a scrollbar to read it fully. It will be positioned below the clicked element unless there isn't enough room, in which case it will be positioned above.
-          <div class="html">View the HTML</div>
-          <pre><code>&lt;a class="jt" href="ajax5.htm" rel="ajax5.htm"&gt;</code></pre>
-          <div class="jquery">View the jQuery</div>
-<pre><code>$('a.jt:eq(2)').cluetip({
-  cluetipClass: 'jtip', arrows: true, 
-  dropShadow: false, 
-  height: '150px', 
-  sticky: true,
-  positionBy: 'bottomTop'
-});</code></pre>
-        </li>
-        <li>For this one, we're loading <a class="jt" href="#" rel="p.localvisible">visible local content</a>
-        <div class="html">View the HTML</div>  
-        <pre><code>&lt;a class="jt" href="#" rel="p.localvisible"&gt;visible local content&lt;/a&gt;</code></pre>
-        <div class="jquery">View the jQuery</div>
-        <pre><code>$('a.jt:eq(3)').cluetip({local: true, hideLocal: false});</code></pre>
-        <p class="localvisible">and here is our visible local content!</p>
-        </li>
-        <li><a class="jt" href="ajax3.htm" rel="ajax3.htm">togglable clueTip</a> can be turned off by unchecking the checkbox<br />
-          <input type="checkbox" name="cb" id="cb" checked="checked" /> <label for="cb">clueTips</label>
-          <div class="html">View the HTML</div>
-          <pre><code>&lt;a class="jt" href="ajax5.htm" rel="ajax5.htm"&gt;</code></pre>
-          <div class="jquery">View the jQuery</div>
-<pre><code>$('a.jt:eq(3)').cluetip({
-  cluetipClass: 'jtip', arrows: true, 
-  dropShadow: false, 
-  onActivate: function(e) {
-    var cb = $('#cb')[0];
-    return !cb || cb.checked;
-  }
-});</code></pre>       
         </li>
       </ol>
       <h4>Rounded Corners Theme</h4>
