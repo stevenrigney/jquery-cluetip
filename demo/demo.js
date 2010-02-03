@@ -26,39 +26,7 @@ $(document).ready(function() {
   $('a.load-local').cluetip({local:true, hideLocal: true, sticky: true, arrows: true, cursor: 'pointer'});
   $('#clickme').cluetip({activation: 'click', sticky: true, width: 650});
   $('ol:first a:last').cluetip({tracking: true});
-
-// jTip theme
-  $('a.jt:eq(0)').cluetip({
-    cluetipClass: 'jtip', 
-    arrows: true, 
-    dropShadow: false,
-    sticky: true,
-    mouseOutClose: true,
-    closePosition: 'title',
-    closeText: '<img src="cross.png" alt="close" />'
-  });
-  $('a.jt:eq(1)').cluetip({cluetipClass: 'jtip', arrows: true, dropShadow: false, hoverIntent: false});
-  $('span[title]').css({borderBottom: '1px solid #900'}).cluetip({splitTitle: '|', arrows: true, dropShadow: false, cluetipClass: 'jtip'});
-
-  $('a.jt:eq(2)').cluetip({
-    cluetipClass: 'jtip', 
-    arrows: true, 
-    dropShadow: false, 
-    height: '150px', 
-    sticky: true,
-    positionBy: 'bottomTop'    
-  });
-
-  $('a.jt:eq(3)').cluetip({local: true, hideLocal: false});
-  
-  $('a.jt:eq(4)').cluetip({
-    cluetipClass: 'jtip', arrows: true, 
-    dropShadow: false, 
-    onActivate: function(e) {
-      var cb = $('#cb')[0];
-      return !cb || cb.checked;
-    }
-  });
+  $('span[title]').css({borderBottom: '1px solid #900'}).cluetip({splitTitle: '|', dropShadow: false});
 
 // Rounded Corner theme
   $('ol.rounded a:eq(0)').cluetip({splitTitle: '|', dropShadow: false, cluetipClass: 'rounded', showtitle: false});
