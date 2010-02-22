@@ -1,4 +1,3 @@
-
 /* the next line is an example of how you can override default options globally (currently commented out) ... */
 
  // $.fn.cluetip.defaults.tracking = true;
@@ -47,7 +46,3 @@ $(document).ready(function() {
     return false;
   });
 });
-  
-
-
-
