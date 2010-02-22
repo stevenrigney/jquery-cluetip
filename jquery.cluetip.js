@@ -305,6 +305,9 @@
       $cluetip.css({top: tipY + 'px'}).removeClass().addClass('clue-' + direction);
       if (opts.arrows) { // set up arrow positioning to align with element
         var bgY = (posY - tipY - opts.dropShadowSteps);
+        $borderColorDirection = 'border-' + direction + '-color';
+        $cluetipArrows.css('border-color', $(this).parent().css('background-color') );
+        $cluetipArrows.css($borderColorDirection, $cluetipTitle.css('background-color') );
         $cluetipArrows.css({top: (/(left|right)/.test(direction) && posX >=0 && bgY > 0) ? bgY + 'px' : /(left|right)/.test(direction) ? 0 : ''}).show();
       } else {
         $cluetipArrows.hide();
