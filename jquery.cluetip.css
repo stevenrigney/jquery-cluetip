@@ -21,10 +21,10 @@
   top: 0;
   left: -10px;
 	font-size: 0px; line-height: 0%; width: 0px;
-	border-top: 10px solid #ffffff;
-	border-right: 10px solid #ffffff;
-	border-bottom: 10px solid #ffffff;
-	border-left: 10px solid #ffffff;
+	border-top: 10px solid;
+	border-right: 10px solid;
+	border-bottom: 10px solid;
+	border-left: 10px solid;
 }
 #cluetip-extra {
   display: none;
@@ -32,24 +32,24 @@
 
 /* default arrows */
 .clue-right .cluetip-arrows {
-	border-right: 10px solid #77c;
+	border-right: 10px solid;
 	border-left: 0px;
 }
 .clue-left .cluetip-arrows {
-	border-left: 10px solid #77c;
+	border-left: 10px solid;
 	border-rigth: 10px;
   left: 100%;
   margin-right: -11px;
 }
 .clue-top .cluetip-arrows {
-	border-top: 10px solid #77c;
+	border-top: 10px solid;
 	border-bottom: 0px;
   top: 100%;
   left: 50%;
   margin-left: -11px;
 }  
 .clue-bottom .cluetip-arrows {
-	border-bottom: 10px solid #77c;
+	border-bottom: 10px solid;
 	border-top: 0px;
   top: -11px;
   left: 50%;
