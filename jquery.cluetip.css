@@ -30,15 +30,15 @@
 }
 
 /* default arrows */
-.clue-right-default .cluetip-arrows {
+.clue-right .cluetip-arrows {
   background-image: url(images/darrowleft.gif);
 }
-.clue-left-default .cluetip-arrows {
+.clue-left .cluetip-arrows {
   background-image: url(images/darrowright.gif);
   left: 100%;
   margin-right: -11px;
 }
-.clue-top-default .cluetip-arrows {
+.clue-top .cluetip-arrows {
   background-image: url(images/darrowdown.gif);
   top: 100%;
   left: 50%;
@@ -46,7 +46,7 @@
   height: 11px;
   width: 22px;  
 }  
-.clue-bottom-default .cluetip-arrows {
+.clue-bottom .cluetip-arrows {
   background-image: url(images/darrowup.gif);
   top: -11px;
   left: 50%;
@@ -54,3 +54,5 @@
   height: 11px;
   width: 22px;
 }
+
+/*  to look at http://www.howtocreate.co.uk/tutorials/css/slopes  */

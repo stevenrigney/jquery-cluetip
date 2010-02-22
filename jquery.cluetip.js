@@ -69,7 +69,7 @@
         $dropShadow.css({position: 'absolute', backgroundColor: '#000'})
         .prependTo($cluetip);
       }
-      var tipAttribute = $this.attr(opts.attribute), ctClass = opts.cluetipClass;
+      var tipAttribute = $this.attr(opts.attribute);
       if (!tipAttribute && !opts.splitTitle && !js) return true;
       // if hideLocal is set to true, on DOM ready hide the local content that will be displayed in the clueTip
       if (opts.local && opts.localPrefix) {tipAttribute = opts.localPrefix + tipAttribute;}
@@ -136,7 +136,6 @@
           : linkWidth + linkLeft + lOffset;
         if (link.tagName.toLowerCase() == 'area' || opts.positionBy == 'mouse' || linkWidth + tipWidth > winWidth) { // position by mouse
           if (mouseX + 20 + tipWidth > winWidth) {  
-            $cluetip.addClass(' cluetip-' + ctClass);
             posX = (mouseX - tipWidth - lOffset) >= 0 ? mouseX - tipWidth - lOffset - parseInt($cluetip.css('marginLeft'),10) + parseInt($cluetipInner.css('marginRight'),10) :  mouseX - (tipWidth/2);
           } else {
             posX = mouseX + lOffset;
@@ -256,7 +255,6 @@
 
 // get dimensions and options for cluetip and prepare it to be shown
     var cluetipShow = function(bpY) {
-      $cluetip.addClass('cluetip-' + ctClass);
       if (opts.truncate) { 
         var $truncloaded = $cluetipInner.text().slice(0,opts.truncate) + '...';
         $cluetipInner.html($truncloaded);
@@ -304,7 +302,7 @@
       if (direction == '') {
         posX < linkLeft ? direction = 'left' : direction = 'right';
       }
-      $cluetip.css({top: tipY + 'px'}).removeClass().addClass('clue-' + direction + '-' + ctClass).addClass(' cluetip-' + ctClass);
+      $cluetip.css({top: tipY + 'px'}).removeClass().addClass('clue-' + direction);
       if (opts.arrows) { // set up arrow positioning to align with element
         var bgY = (posY - tipY - opts.dropShadowSteps);
         $cluetipArrows.css({top: (/(left|right)/.test(direction) && posX >=0 && bgY > 0) ? bgY + 'px' : /(left|right)/.test(direction) ? 0 : ''}).show();
@@ -453,7 +451,6 @@
                                 // within the clueTip body. more info below [6]
     escapeTitle:      false,    // whether to html escape the title attribute
     showTitle:        true,     // show title bar of the clueTip, even if title attribute not set
-    cluetipClass:     'default',// class added to outermost clueTip div in the form of 'cluetip-' + clueTipClass.
     hoverClass:       '',       // class applied to the invoking element onmouseover and removed onmouseout
     waitImage:        true,     // whether to show a "loading" img, which is set in jquery.cluetip.css
     cursor:           'help',

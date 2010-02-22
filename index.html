@@ -183,7 +183,6 @@ $(document).ready(function() {
     splitTitle:       '',       // A character used to split the title attribute into the clueTip title and divs
                                 // within the clueTip body. more info below [6]
     showTitle:        true,     // show title bar of the clueTip, even if title attribute not set
-    cluetipClass:     'default',// class added to outermost clueTip div in the form of 'cluetip-' + clueTipClass. more info below [7]
     hoverClass:       '',       // class applied to the invoking element onmouseover and removed onmouseout
     waitImage:        true,     // whether to show a "loading" img, which is set in jquery.cluetip.css
     arrows:           false,    // if true, displays arrow on appropriate side of clueTip. more info below [8]
@@ -240,7 +239,6 @@ $(document).ready(function() {
     <li><strong>leftOffset</strong>: For positionBy "auto", "mouse", and "bottomTop", the number will be added to clueTip's "left" value if the clueTip appears to the right of the invoking element and subtracted if the clueTip appears to the left. For positionBy "fixed", the number will always be added to the "left" value of the clueTip, offsetting it from the right side of the invoking element.</li>
     <li><strong>local</strong>: for example, using the default tip attribute, "rel", you could have a link &mdash; &lt;a href="somewhere.htm" rel=".someClass"&gt; &mdash; that would show the contents of the first element in the DOM that has a class of "someClass."</li>
     <li><strong>splitTitle</strong>: if used, the clueTip will be populated only by the title attribute</li>
-    <li><strong>cluetipClass</strong>: this is also used for a "directional" class on the same div, depending on where the clueTip is in relation to the invoking element. The class appears in the form of 'cluetip-' + <em>direction</em> + <em>cluetipClass</em>. this allows you to create your own clueTip theme in a separate CSS file or use one of the three pre-packaged themes: default, jtip, or rounded.</li>
     <li><strong>arrows</strong>: <strong>UPDATE</strong>: this option displays a div containing an arrow background image. Arrow images are set using the background-image property in the CSS. The direction of the arrow changes depending on which side of the invoking element the clueTip appears. The arrows option sets the background-position of the cluetip div so that the arrow will accurately point to the invoking element, regardless of where it appears in relation to it.</li>
   </ol> 
     </div>
